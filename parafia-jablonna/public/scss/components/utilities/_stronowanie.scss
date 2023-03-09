@@ -1,0 +1,52 @@
+nav.pagination-nav {
+    @include flex;
+    margin-top: 40px;
+
+    ul.pagination {
+
+        li.page-item {
+            
+            a.page-link, a.page-link>span {
+                color: rgba(0, 0, 0, 0.7);
+                font-size: 20px;
+                @include fonts($weight:600);
+            }
+
+            a.page-link{
+                padding: 5px 20px;
+            }
+
+            a.disabled-page{
+                background-color: #00000029;
+                color: rgba(0, 0, 0, 0.222);
+                pointer-events: none;
+            }
+
+            a.page-link:hover{
+                background-color: #9f9f9f3e;
+            }
+
+            a.page-link:focus {
+                box-shadow: none;
+            }
+
+            #active-page {
+                background-color: #00000014;
+            }
+            
+            #active-page:hover {
+                background-color: #0000004e;
+            }
+
+            @media all and (max-width: $small) {
+                a.page-link, a.page-link>span {
+                    font-size: 16px;
+                }
+
+                a.page-link{
+                    padding: 5px 13px;
+                }
+            }
+        }
+    }
+}

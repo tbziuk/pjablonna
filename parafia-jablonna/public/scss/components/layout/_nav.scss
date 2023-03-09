@@ -1,0 +1,39 @@
+a.nav-link{
+    position: relative;
+    color: #000000e6;
+}
+/*
+a.nav-link::after{
+    content: '';
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background-color: #0000009b;
+}
+
+a.nav-link.last-nav-item::after{
+    background-color: transparent;
+} */
+
+a.nav-link:hover {
+    background-color: #d9d9d980;
+    border-radius: 3px;
+}
+
+@media all and (max-width: 1400px) {
+    a.nav-link {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: $extra-large) {
+    a.nav-link {
+        font-size: 12px;
+    }
+
+    a.nav-link::after{
+        top: 9px;
+    }
+}

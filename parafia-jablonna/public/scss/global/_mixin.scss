@@ -1,0 +1,38 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexbox {
+    @include flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@mixin boxout {
+    background-color: $main-bg-clr;
+    box-shadow: $box-shadow;
+}
+
+@mixin box {
+    @include boxout;
+    border: 1px solid $main-bg-clr;
+    border-radius: 0;
+}
+
+@mixin center {
+    margin: 0 auto;
+}
+
+@mixin enclose {
+    transition: box-shadow .32s linear;
+
+    &:hover {
+        box-shadow: 11px 9px 13px -6px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@mixin fonts ($weight, $style: normal) {
+    font-weight: $weight;
+    font-style: $style;
+}

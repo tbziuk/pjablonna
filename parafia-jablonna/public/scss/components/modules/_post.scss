@@ -1,0 +1,38 @@
+div.akt-post {
+    * {
+        box-sizing: border-box;
+    }
+
+    div.post {
+        div.card {
+            h2 {
+                font-weight: bold;
+            }
+
+            div.card-body {
+                p {
+                    color: rgba($color: #000000, $alpha: 0.7);
+                }
+
+                div.gallery {
+                    margin-top: 15px;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    a {
+                        height: 25%;
+                        img {
+                            width: 100%;
+                            padding: 10px 20px;
+                            max-height: 25%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

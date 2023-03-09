@@ -1,0 +1,24 @@
+h1.main-header {
+    text-align: center; 
+    margin-top: 2%; 
+    font-style: oblique; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .5px;
+    font-weight: bold;
+    color: #000;
+
+    @media all and (max-width: $medium) {
+        letter-spacing: 0;
+        font-size: 28px;
+    }
+}
+
+.divider { 
+    margin: 20px 5.5%;
+}
+
+h2.semi-main-header {
+    @include fonts($weight: 600);
+    text-align: center;
+    margin-top: 1.5%; 
+}

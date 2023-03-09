@@ -1,0 +1,60 @@
+.czytania-na-dzis {
+    margin: 20px 0 65px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .czytania {
+        @include center;
+        padding: 0;
+        @include flex;
+
+        .czytanie {
+            padding: 10px 25px;
+            position: relative;
+            margin: 12px 20px;
+            font-size: 20px;
+            @include box;
+            height: 62px;
+            max-width: 336px;
+            @include flexbox;
+            justify-content: initial;
+            @include enclose;
+
+
+            span.title-read {
+                position: relative;
+                left: 15px;
+            }
+
+            button.read-more-btn {
+                padding: 5px 30px;
+            }
+
+            @media all and (max-width: $extra-large) {
+                & {
+                    width: 100%;
+                    display: flex;
+                    max-width: 50%;
+                    font-size: 16px;
+                    padding: 10px 0px;
+
+                    button.read-more-btn {
+                        padding: 5px 15px;
+                        right: 10px;
+                    }
+                }
+            }
+
+            div.modal-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            div.modal-footer-end {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

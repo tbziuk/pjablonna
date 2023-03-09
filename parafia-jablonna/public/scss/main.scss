@@ -1,0 +1,25 @@
+@import 'global/help';
+
+@import 'global/base';
+@import 'global/mixin';
+@import 'global/variables';
+
+@import 'components/utilities/buttons';
+@import 'components/utilities/headers';
+@import 'components/utilities/stronowanie';
+@import 'components/utilities/filter';
+
+@import 'components/modules/czytania';
+@import 'components/modules/full-section';
+@import 'components/modules/aktualnosci-short';
+@import 'components/modules/info-short';
+@import 'components/modules/intencje';
+@import 'components/modules/ogloszenia';
+@import 'components/modules/wspolnoty';
+@import 'components/modules/post';
+
+@import 'pages/msze';
+@import 'pages/404';
+
+@import 'components/layout/nav'; 
+@import 'components/layout/footer';    

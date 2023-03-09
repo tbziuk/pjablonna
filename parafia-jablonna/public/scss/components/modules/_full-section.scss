@@ -1,0 +1,332 @@
+//#######################################################
+//################## OGOLNY - adoracja ##################
+//#######################################################
+.full-width-cont {
+    @include flex;
+    justify-content: initial;
+    @include boxout;
+    max-height: 390px;
+    height: 100%;
+
+    div.do-not-resize {
+        flex-basis: 60%;
+        width: 60%;
+        display: block;
+        height: 390px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div {
+        flex-basis: 40%;
+        padding: 30px 15px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 32px;
+            margin: 15px auto 38px;
+            text-align: center;
+            @include fonts($weight: 700);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 28px;
+            text-align: center;
+            max-width: 460px;
+        }
+
+        a {
+            width: 70%;
+
+            button {
+                margin-top: 30px;
+                background-color: #e5e5e5a0;
+                padding: 15px 40px;
+                width: 100%;
+                border: 1px solid #e5e5e5a0;
+                border-radius: 6px;
+                box-shadow: $box-shadow;
+                font-size: 22px;
+                font-weight: bolder;
+            }
+
+            button:hover {
+                background-color: $darker-bg-clr;
+                border: 1px solid $darker-bg-clr;
+            }
+        }
+    }
+
+    //######################################################
+    //################## ODWROCONY #########################
+    //######################################################
+
+    div {
+        h3.other-2 {
+            margin-bottom: 0 auto 20px;
+        }
+
+        p.other-2 {
+            font-size: 22px;
+            margin-top: 10px;
+            max-width: 520px;
+
+            span {
+                display: block;
+                margin-top: 30px;
+                @include fonts($weight: 700);
+            }
+        }
+    }
+
+    //######################################################
+    //################## MSZE ##############################
+    //######################################################
+
+    h3.msze {
+        margin: 20px auto 10px;
+    }
+    h4.msze {
+        margin-top: 20px;
+        @include fonts($weight: 700);
+        font-size: 22px;
+    }
+    ul.msze {
+        @include flexbox;
+        flex-wrap: wrap;
+        padding: 0;
+
+        li {
+            font-size: 20px;
+            list-style: none;
+            display: inline-block;
+            width: 47px;
+            padding: 0 3px;
+
+            &#dzieci {
+                width: max-content;
+            }
+
+            sup {
+                font-size: 14px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+    p.msze {
+        font-size: 14px;
+        @include fonts($weight: 700);
+        margin-top: 20px;
+        max-width: 90%;
+        width: 90%;
+    }
+
+    //######################################################
+    //################## KOLEDA ############################
+    //######################################################
+
+    h4.kancelaria-h {
+        margin: 10px 0;
+        @include fonts($weight: 700);
+        font-size: 22px;
+    }
+
+    ul.kancelaria-h {
+        padding: 0;
+        margin: 0 0 10px;
+
+        li.kancelaria-h {
+            list-style-type: none;
+            text-align: center;
+            width: max-content;
+            display: block;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+    }
+
+    p.kancelaria-h {
+        font-size: 16px;
+        @include fonts($weight: 700);
+        margin-top: 20px;
+        max-width: 90%;
+        width: 90%;
+    }
+
+    //######################################################
+    //################## DYZURY ############################
+    //######################################################
+
+    ul.dyzury {
+        padding: 0;
+        margin: 20px 0 10px;
+
+        li.dyzury {
+            list-style-type: none;
+            width: max-content;
+            font-size: 26px;
+
+            span {
+                @include fonts($weight: 700);
+            }
+        }
+    }
+
+    //######################################################
+    //################## KONTAKT ###########################
+    //######################################################
+    
+    ul.kontakt {
+        padding: 0 15px;
+        margin: 10px 0 10px;
+        @include flexbox;
+        flex-direction: column;
+
+        li.kontakt {
+            display: block;
+            line-height: 2.5;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+            font-size: 20px;
+
+            span {
+                @include fonts($weight: 700);
+            }
+        }
+    }
+
+    //######################################################
+    //################## media #############################
+    //######################################################
+
+    @media all and (max-width: 1480px){ 
+        ul.kontakt {
+            li.kontakt {  
+                font-size: 18px;      
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 1250px){ 
+        ul.kontakt {
+            li.kontakt {  
+                font-size: 17px;      
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: $extra-large) {
+        flex-direction: column;
+        max-height: 100%;
+
+        div.do-not-resize {
+            width: auto;
+            min-height: 300px;
+        }
+
+        div {
+            padding: 18px;
+
+            h3,
+            h3.other-2 {
+                //ODWROCONY
+                font-size: 28px;
+                margin: 0 auto 15px;
+            }
+
+            p,
+            p.other-2 {
+                //ODWROCONY
+                font-size: 16px;
+                margin-top: 8px;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+
+                button {
+                    margin-top: 10px;
+                    padding: 15px 20px;
+                    font-size: 18px;
+                    width: 50%;
+                }
+            }
+        }
+
+        div.other-2 {
+            order: 1;
+        }
+
+        div.other-22 {
+            order: 2;
+        }
+
+        ul.dyzury {
+            li.dyzury {
+                font-size: 18px;
+            }
+        }
+
+        ul.kontakt {
+            li.kontakt {  
+                font-size: 20px;      
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        @media all and (max-width: $medium) {
+            div {
+                p,
+                p.other-2 {
+                    max-width: 70%;
+                    font-size: 18px;
+                }
+
+                a {
+                    width: 70%;
+
+                    button {
+                        margin-top: 12px;
+                        padding: 12px 15px;
+                        font-size: 18px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: $small){ 
+        ul.kontakt {
+            li.kontakt {  
+                display: block;
+                font-size: 16px;   
+
+                span {
+                    display: block;
+                    font-size: 15px;
+                    @include fonts($weight: 800);
+                }
+            }
+        }
+    }
+}
